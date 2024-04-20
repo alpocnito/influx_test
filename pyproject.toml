@@ -6,7 +6,7 @@ authors = ["Руслан Зарипов <zaripov.ra@phystech.edu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 pydub = "^0.25.1"
 numpy = "^1.26.4"
 influxdb-client = {extras = ["ciso"], version = "^1.41.0"}

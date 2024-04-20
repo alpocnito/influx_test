@@ -25,7 +25,7 @@ def callback(indata, outdata, frames, _time, status):
     print('glob:', time.time() - global_time)
     start = time.time()
     left_data = client.query_api().query_stream(
-        f'from(bucket:"{bucket}") |> range(start: -1s) '
+        f'from(bucket:"{bucket}") |> range(start: -2s, stop: -1s) '
         f'|> filter(fn: (r) => r["_measurement"] == "a") '
         f'|> filter(fn: (r) => r["_field"] == "l") '
         f'|> map(fn: (r) => ({{r with _value: r._value * 20.0}}))'

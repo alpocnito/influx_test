@@ -24,7 +24,7 @@ def callback(indata, outdata, frames, _time, status):
     points = []
     start = time.time()
     for val in indata:
-        write_time = int(time.time() * 1_000_000_000) 
+        write_time = int(time.time() * 1_000_000_000)
         point = {
             "measurement": "a",
             "time": write_time,

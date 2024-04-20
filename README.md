@@ -1,7 +1,12 @@
 
 Поднимаем базу данных
 ```
-docker compose up -d
+docker-compose up -d
+```
+
+Устанавливаем системные зависимости
+```
+sudo apt-get install libportaudio2
 ```
 
 Устанавливаем python-зависимости
