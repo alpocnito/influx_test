@@ -6,5 +6,12 @@ services:
     env_file:
       - .env
     container_name: influxdb_mipt
+    expose:
+      - 8086
     ports:
       - "8086:8086"
+  ser-wavelet:
+    build: ser-wavelet
+    env_file:
+      - ser-wavelet/.env
+    container_name: ser-wavelet_mipt
