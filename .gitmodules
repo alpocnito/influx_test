@@ -1,0 +1,3 @@
+[submodule "ser-wavelet"]
+	path = ser-wavelet
+	url = https://github.com/alpocnito/ser-wavelet.git
