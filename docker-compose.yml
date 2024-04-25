@@ -10,8 +10,13 @@ services:
       - 8086
     ports:
       - "8086:8086"
+
   ser-wavelet:
     build: ser-wavelet
-    env_file:
-      - ser-wavelet/.env
+    volumes:
+      - ./ser-wavelet:/ser-wavelet
+    expose:
+      - 8888
+    ports:
+      - "8888:8888"
     container_name: ser-wavelet_mipt

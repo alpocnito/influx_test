@@ -12,8 +12,9 @@ bucket = "bucket1"
 
 client = influxdb_client.InfluxDBClient(
     url=url,
-    token=token,
-    org=org
+    org=org,
+    username='admin',
+    password='password',
 )
 
 global_time = 0
@@ -39,6 +40,7 @@ def callback(indata, outdata, frames, _time, status):
     with client.write_api() as write_api:
         write_api.write(bucket=bucket, org=org, record=points)
     print('proc:', time.time() - start)
+    print('all:', time.time() - global_time)
     global_time = time.time()
 
 with sd.Stream(channels=1, callback=callback, blocksize=44100):
